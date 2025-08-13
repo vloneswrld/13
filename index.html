@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tash ➜ Ameer • 1 Year & 1 Month</title>
+  <meta name="theme-color" content="#ffb3d9">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#fff2f7;
+      --bg2:#e9e4ff;
+      --ink:#2a2233;
+      --muted:#6b5f78;
+      --glass: rgba(255,255,255,.65);
+      --shadow: 0 20px 40px rgba(155, 107, 255, .18);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Poppins, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 800px at 20% -20%, #ffe6f2 0%, transparent 60%),
+        radial-gradient(900px 700px at 110% 10%, #efe6ff 0%, transparent 60%),
+        linear-gradient(160deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+    }
+
+    /* Smooth floating emoji background */
+    .floaters{
+      position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;
+    }
+    .floater{
+      position:absolute; font-size:clamp(18px, 2.5vw, 28px); opacity:.6;
+      animation: rise linear var(--dur) infinite;
+      filter: drop-shadow(0 3px 6px rgba(0,0,0,.12));
+      will-change: transform, opacity;
+    }
+    @keyframes rise{
+      0%{ transform:translateY(110vh) translateX(var(--x)); opacity:0 }
+      10%{opacity:.8}
+      90%{opacity:.8}
+      100%{ transform:translateY(-15vh) translateX(calc(var(--x) + 40px)); opacity:0 }
+    }
+
+    header{
+      position:relative;
+      padding:28px 20px 10px;
+      display:flex; justify-content:center; align-items:center;
+    }
+    .badge{
+      font-family:Pacifico, cursive;
+      font-size:clamp(20px,2.6vw,30px);
+      background:linear-gradient(135deg, #ffb3d9, #c3b3ff);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow: 0 6px 20px rgba(255,105,180,.35);
+    }
+
+    .wrap{
+      position:relative; z-index:1;
+      max-width: 880px; margin: 0 auto; padding: 14px 16px 80px;
+    }
+    .card{
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,.7);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero{
+      padding: 28px clamp(18px, 4vw, 42px);
+      display:grid; gap:12px; place-items:center;
+      text-align:center;
+      background:
+        radial-gradient(1200px 400px at 50% 0%, rgba(255,255,255,.7), transparent 70%),
+        linear-gradient(180deg, rgba(255,255,255,.2), transparent 60%);
+    }
+    .title{
+      font-weight:800;
+      font-size: clamp(28px, 5vw, 52px);
+      letter-spacing:.5px;
+      line-height:1.1;
+    }
+    .subtitle{
+      font-size: clamp(14px, 2.4vw, 18px);
+      color:var(--muted);
+    }
+
+    .content{
+      padding: 18px clamp(18px, 4vw, 40px) 28px;
+      line-height:1.75; font-size: clamp(15px, 2.1vw, 17px);
+    }
+    .content p{ margin: 0 0 16px; text-wrap: pretty; }
+
+    .toolbar{
+      display:flex; justify-content:center; padding-bottom: 28px;
+    }
+    button{
+      cursor:pointer; border:none; border-radius:14px; padding:12px 16px;
+      font-weight:700; font-size:14px;
+      background:linear-gradient(135deg, #ff69b4, #9b6bff);
+      color:white; box-shadow: 0 10px 24px rgba(155,107,255,.35);
+      transition: transform .08s ease, filter .2s ease;
+    }
+    button:hover{ filter:brightness(1.04)}
+    button:active{ transform: translateY(1px) scale(.99)}
+
+    footer{
+      text-align:center; color:var(--muted); font-size:13px; padding:20px 10px 40px;
+    }
+
+    /* Heart pop layer */
+    .pop{
+      position:fixed; inset:0; pointer-events:none; z-index:3;
+    }
+    .heart{
+      position:absolute; font-size:20px; animation: boom .9s ease-out forwards;
+      filter: drop-shadow(0 6px 10px rgba(255,105,180,.35));
+    }
+    @keyframes boom{
+      0%{ transform: translate(-50%,-50%) scale(.3); opacity:0 }
+      25%{ opacity:1 }
+      100%{ transform: translate(var(--dx), var(--dy)) scale(1.1) rotate(var(--rot)); opacity:0 }
+    }
+  </style>
+</head>
+<body>
+  <div class="floaters" aria-hidden="true" id="floaters"></div>
+  <div class="pop" id="pop" aria-hidden="true"></div>
+
+  <header>
+    <div class="badge">Tash ✦ Ameer</div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="hero">
+        <h1 class="title">Happy 1 Year &amp; 1 Month 💞</h1>
+        <p class="subtitle">Thirteen months of us — and it’s still getting sweeter.</p>
+      </div>
+
+      <div class="content">
+        <p><strong>Happy 1 year &amp; 1 month, my love 🤍✨</strong></p>
+
+        <p>Thirteen months ago, we started something I didn’t even know I needed so badly, and now, I can’t imagine a world without you in it. Ameer, you make me feel so deeply loved, so seen, so understood, in a way no one ever has before. With you, I’ve never had to pretend or hold back. You see the real me, my good, my bad, my messy, my soft, and you choose me anyway. That’s the most beautiful thing anyone has ever done for me. You’ve shown me what it’s like to be truly valued, to have someone look at you like you’re the most important person in the world. And to me, <em>you</em> are exactly that.</p>
+
+        <p>You’re the most precious boy I’ve ever met. I mean it, there is not a single thing about you that I wouldn’t cherish. Your laugh, your smile, your eyes, the way you speak, the cute little dimples, — I love them all. I love the way you can make me laugh even when I swore I wouldn’t smile that day. I love how your voice instantly calms me down, even if I’m feeling my worst. I love the way you always seem to know when something’s off, and how you’ll try, in your own way, to make it better. Everything about you feels like it was made perfectly for me.</p>
+
+        <p>We’ve had our ups and downs, moments where things felt hard, when emotions ran high, and life tried to pull us apart. But no matter what, we’ve always found our way back to each other. And that’s what makes this love so unshakable, it’s not perfect, but it’s ours, and it’s worth every single fight, every single tear, because the make ups, the late night talks, the laughter after the storm… those are priceless. Every time we make it through something, I fall for you all over again, even deeper than before.</p>
+
+        <p>You’re not just my boyfriend, you’re my safe place, my best friend, my partner, my comfort, my constant. You’re the one I want to tell everything to, the one I want to run to when something good happens, and the one I want holding me when the world feels heavy. You’ve made “forever” feel possible, even easy, because loving you never feels like work. It feels like breathing. It feels like home.</p>
+
+        <p>So here’s to us, Ameer. To every memory we’ve made and every one we haven’t yet. To the little moments and the big milestones. To the laughter, the late nights, the inside jokes, the serious talks, and even the arguments, because they’ve all led us here. I love you endlessly, and I’m so grateful it’s you. Always you. Only you. For the rest of my life 🫶</p>
+      </div>
+
+      <div class="toolbar">
+        <button id="partyBtn">Shower with Hearts 💖</button>
+      </div>
+    </section>
+
+    <footer>
+      Made with silly, mushy love by Tash • ʕ•ᴥ•ʔっ♡
+    </footer>
+  </main>
+
+  <script>
+    const emojis = ["💖","💘","✨","💞","🌙","🫶","💕","💗","⭐","🌸"];
+    const floaters = document.getElementById('floaters');
+    function addFloater(){
+      const span = document.createElement('span');
+      span.className = 'floater';
+      span.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+      span.style.left = Math.random()*100 + 'vw';
+      span.style.setProperty('--x', (Math.random()*40 - 20) + 'px');
+      span.style.animationDelay = (Math.random()*3)+'s';
+      span.style.setProperty('--dur', (15 + Math.random()*15) + 's');
+      floaters.appendChild(span);
+      setTimeout(()=> span.remove(), 30000);
+    }
+    for(let i=0;i<25;i++){ addFloater() }
+    setInterval(addFloater, 1200);
+
+    // Heart explosion
+    const pop = document.getElementById('pop');
+    const partyBtn = document.getElementById('partyBtn');
+    partyBtn.addEventListener('click', burstHearts);
+    function burstHearts(){
+      const centerX = window.innerWidth/2;
+      const centerY = window.innerHeight/2;
+      for(let i=0;i<22;i++){
+        const h = document.createElement('div');
+        h.className = 'heart';
+        h.textContent = ['💖','💘','💕','💞'][Math.floor(Math.random()*4)];
+        h.style.left = centerX + 'px';
+        h.style.top = centerY + 'px';
+        const dx = (Math.random()*2-1) * 220 + 'px';
+        const dy = (Math.random()*2-1) * 180 + 'px';
+        const rot = (Math.random()*2-1) * 180 + 'deg';
+        h.style.setProperty('--dx', dx);
+        h.style.setProperty('--dy', dy);
+        h.style.setProperty('--rot', rot);
+        pop.appendChild(h);
+        setTimeout(()=>h.remove(), 950);
+      }
+    }
+  </script>
+</body>
+</html>
